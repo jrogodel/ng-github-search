@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 
@@ -9,11 +9,11 @@ import 'rxjs/add/operator/map';
     private clientId: string = '2b41b3540b8ad0292fa9';
     private clientSecret: string = 'ff5056e379c3dc9318e344202c9ffe04807d531e';
     
-    constructor(private _http: Http) {
-      console.log("github service connected...")
+    constructor(private _http: Http) { }
+
+    // fetch user information from github API
+    getUser() {
+      return this._http.get('https://api.github.com/users/'+this.username)
+        .map(res => res.json());
     }
   }
-
-
-// TODO
-// fetch user information through this service

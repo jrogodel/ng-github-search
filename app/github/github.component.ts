@@ -9,9 +9,12 @@ import { GithubService } from '../github.service';
   providers: [ GithubService ]
 })
 
-
 export class GithubComponent {
   constructor(private _githubService: GithubService) {
-    console.log("github component connected...")
+
+    // Listen to Observable
+    this._githubService.getUser().subscribe(users => {
+      console.log(users);
+    })
   }
 }
