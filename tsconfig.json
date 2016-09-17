@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./build",
+    "outDir": "./dist",
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -12,6 +12,5 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
   ]
 }
