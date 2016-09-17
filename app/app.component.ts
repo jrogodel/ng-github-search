@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  template: '<h1>Angular 2 Rocks!</h1>'
+  selector: 'jg-app',
+  templateUrl: './app/app.component.html',
+  styleUrls: [ './app/app.component.css' ]
 })
 
-export class AppComponent { }
+export class AppComponent {
+  
+ }
