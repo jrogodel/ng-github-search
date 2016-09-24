@@ -10,11 +10,14 @@ import { GithubService } from '../github.service';
 })
 
 export class GithubComponent {
-  constructor(private _githubService: GithubService) {
+  
+  user: any = '';
 
+  constructor(private githubService: GithubService) {
+    
     // Listen to Observable
-    this._githubService.getUser().subscribe(users => {
-      console.log(users);
-    })
+    this.githubService
+        .getUser()
+        .subscribe(user => this.user = user);
   }
 }

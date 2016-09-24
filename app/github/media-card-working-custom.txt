@@ -1,0 +1,125 @@
+<!--media object-->
+<div class="container">
+  <h2 class="media-header">{{user.name}}</h2>
+  <div class="media-obj">
+    <img class="media-img" src="{{user.avatar_url}}" alt="{{user.name}}'s profile photo">
+    <div class="detail">
+    <ul class="info">
+      <li class="label repo">{{user.public_repos}} Public Repos</li>
+      <li class="label gist">{{user.public_gists}} Public Gists</li>
+      <li class="label followers">Followers {{user.followers}} Followers</li>
+      <li class="label following">{{user.following}} Following</li>
+    </ul>
+    <ul class="personal-info">
+      <li>User Name: {{user.login}}</li>
+      <hr>
+      <li>Location: {{user.location}}</li>
+      <hr>
+      <li>Email: {{user.email}}</li>
+      <hr>
+      <li>Blog: {{user.blog}} </li>
+      <hr>
+      <li>Member Since: {{user.login}}</li>
+      <hr>
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+css
+
+
+.container {
+  margin: 8em auto;
+  max-width: 60%;
+  border: solid 2px #ececec;
+}
+
+.media-header {
+  margin: 20px 0;
+  padding: 20px;
+  padding-left: 5em;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:#2c3e50;
+}
+
+.media-obj {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.media-img {
+  height: 15em;
+}
+
+li {
+  list-style: none;
+  margin-left: 1em;
+  
+  
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.personal-info {
+  margin-left: 40px;
+  margin: 20px 0 60px 40px;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0;
+  border: solid 2px #ececec; 
+}
+
+.personal-info li {
+  margin: 1em 0 .5em 0;
+  padding: 0 12em 0 1em;
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+}
+
+.label {
+  margin: 0 0 0 10px;
+  padding: 5px 10px; 
+}
+
+.repo {
+  background-color: #95a5a6;
+  margin-left: 0;
+}
+
+.gist { 
+  background-color: #2ecc71;
+}
+
+.followers {
+  background-color: #3498db;
+
+}
+
+.following {
+  background-color: #1abc9c;
+}
