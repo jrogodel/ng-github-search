@@ -13,9 +13,16 @@ export class GithubComponent {
   
   user: any;
   repos: any;
-  
+  username: string;
+
   constructor(private githubService: GithubService) {
-    
+    console.log("Github Component Connected...")
+  }
+
+  search() {
+
+    this.githubService.updateUsername(this.username);
+
     // Listen to Observable
     this.githubService
         .getUser()
@@ -24,5 +31,7 @@ export class GithubComponent {
     this.githubService
         .getRepos()
         .subscribe(repos => this.repos = repos);
+  }
+
   }
 }

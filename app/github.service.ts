@@ -20,4 +20,7 @@ import 'rxjs/add/operator/map';
       return this.http.get('https://api.github.com/users/'+this.username+'/repos')
        .map(res => res.json());
     }
+    updateUsername(username: string) {
+      this.username = username;
+    }
   }
