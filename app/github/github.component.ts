@@ -11,13 +11,18 @@ import { GithubService } from '../github.service';
 
 export class GithubComponent {
   
-  user: any = '';
-
+  user: any;
+  repos: any;
+  
   constructor(private githubService: GithubService) {
     
     // Listen to Observable
     this.githubService
         .getUser()
         .subscribe(user => this.user = user);
+      
+    this.githubService
+        .getRepos()
+        .subscribe(repos => this.repos = repos);
   }
 }
